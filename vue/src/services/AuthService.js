@@ -1,13 +1,26 @@
 import axios from 'axios'
+import store from '../store/index.js'
+
+/*
+use https://manage-my-comics.herokuapp.com for live server
+use http://localhost:9000 for local server
+*/
+
+const http = axios.create({
+  baseURL: 'https://manage-my-comics.herokuapp.com',
+  headers: {
+    Authorization: `Bearer ${store.state.token}`
+  }
+})
 
 export default {
 
   login (user) {
-    return axios.post('/auth/login', user)
+    return http.post('/login', user)
   },
 
   register (user) {
-    return axios.post('/auth/register', user)
+    return http.post('/register', user)
   }
 
 }
