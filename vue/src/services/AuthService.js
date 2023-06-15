@@ -7,7 +7,7 @@ use http://localhost:9000 for local server
 */
 
 const http = axios.create({
-  baseURL: 'https://manage-my-comics.herokuapp.com',
+  baseURL: 'http://localhost:9000',
   headers: {
     Authorization: `Bearer ${store.state.token}`
   }

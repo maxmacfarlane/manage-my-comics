@@ -1,4 +1,4 @@
-package com.maxwell.managemycomics;
+package com.maxwell.manage_my_comics;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

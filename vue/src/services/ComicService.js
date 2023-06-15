@@ -2,12 +2,12 @@ import axios from 'axios'
 import store from '../store/index.js'
 
 /*
-use https://manage-my-comics.herokuapp.com for live server
-use http://localhost:9000 for local server
+use https://manage-my-comics.herokuapp.com/api for live server
+use http://localhost:9000/api for local server
 */
 
 const http = axios.create({
-  baseURL: 'https://manage-my-comics.herokuapp.com/api',
+  baseURL: 'http://localhost:9000/api',
   headers: {
     Authorization: `Bearer ${store.state.token}`
   }
