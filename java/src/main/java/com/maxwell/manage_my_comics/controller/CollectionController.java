@@ -34,8 +34,8 @@ public class CollectionController {
     @GetMapping("/user/{userId}/collections")
     public List<ComicCollection> getCollectionsByUserId(@PathVariable int userId){
         List<ComicCollection> collection = collectionDao.listCollectionsByUser(userId);
-        if(collection == null || collection.size() == 0){
-            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Collection not found");
+        if (collection == null || collection.size() == 0) {
+            throw new ResponseStatusException(HttpStatus.NO_CONTENT, "Collection not found");
         } else return collection;
     }
 

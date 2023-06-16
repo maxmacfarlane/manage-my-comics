@@ -37,7 +37,7 @@ import marvelService from '../services/MarvelService.js'
 import comicService from '../services/ComicService.js'
 
 export default {
-  name: 'test-search-comics',
+  name: 'search-comics',
   components: { ComicCardMarvelApi },
   data () {
     return {

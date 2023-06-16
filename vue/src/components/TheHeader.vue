@@ -9,40 +9,40 @@
           <span></span>
         </div>
         <div id="logo-box">
-          <router-link :to="{ name: 'home' }"><img id="logo" src="..\public\MMC-logo.png" alt="Manage My Comics logo" /></router-link>
+          <router-link :to="{ name: 'HomeView' }"><img id="logo" src="..\public\MMC-logo.png" alt="Manage My Comics logo" /></router-link>
         </div>
       </div>
       <nav id="nav-bar" v-show="isActive">
           <ul id="nav-bar-links" >
-            <li id="browse" class="nav-link"><router-link :to="{ name: 'browse' }">Browse</router-link></li>
+            <li id="browse" class="nav-link"><router-link :to="{ name: 'BrowseView' }">Browse</router-link></li>
             <li id="new-comics" class="nav-link"><router-link :to="{ name: 'new-comics' }">New Comics</router-link></li>
-            <li id="collections" class="nav-link"><router-link :to="{ name: 'collections' }">My Collections</router-link></li>
+            <li id="collections" class="nav-link"><router-link :to="{ name: 'CollectionsView' }">My Collections</router-link></li>
             <li id="home" class="nav-link"><router-link :to="{ name: 'home' }">Public Collections</router-link></li>
           </ul>
           <ul id="login-register">
-            <li id="login" class="nav-link" v-if="signedIn"><router-link :to="{ name: 'login' }" tag="button">SIGN IN</router-link></li>
-            <li id="register" class="nav-link" v-if="signedIn"><router-link :to="{ name: 'register' }" tag="button">REGISTER</router-link></li>
-            <li id="logout" class="nav-link" v-show="!signedIn"><router-link :to="{ name: 'logout' }" tag="button">LOGOUT</router-link></li>
+            <li id="login" class="nav-link" v-if="signedIn"><router-link :to="{ name: 'LoginView' }" tag="button">SIGN IN</router-link></li>
+            <li id="register" class="nav-link" v-if="signedIn"><router-link :to="{ name: 'RegisterView' }" tag="button">REGISTER</router-link></li>
+            <li id="logout" class="nav-link" v-show="!signedIn"><router-link :to="{ name: 'LogoutView' }" tag="button">LOGOUT</router-link></li>
           </ul>
       </nav>
     </div>
     <div id="desktop-header">
       <div class="header">
         <div>
-          <router-link v-bind:to="{ name: 'home' }"><img class="logo" src="..\public\MMC-logo.png" alt="Manage My Comcis!" /></router-link>
+          <router-link v-bind:to="{ name: 'HomeView' }"><img class="logo" src="..\public\MMC-logo.png" alt="Manage My Comcis!" /></router-link>
         </div>
         <nav>
           <ul class="nav-bar">
-            <li><router-link :to="{ name: 'browse' }" style="text-decoration: none;">Browse</router-link></li>
+            <li><router-link :to="{ name: 'BrowseView' }" style="text-decoration: none;">Browse</router-link></li>
             <li class="newcomics"><router-link :to="{ name: 'new-comics' }" style="text-decoration: none;">New Comics</router-link></li>
-            <li class="collections"><router-link :to="{ name: 'collections' }" style="text-decoration: none;">Collections</router-link></li>
+            <li class="collections"><router-link :to="{ name: 'CollectionsView' }" style="text-decoration: none;">Collections</router-link></li>
           </ul>
         </nav>
         <div>
           <ul class="login-register">
-            <li class="login" ><router-link class="nav-link" :to="{ name: 'login' }" v-if="$store.state.token.length <= 0" tag="button">SIGN IN</router-link></li>
-            <li class="register" ><router-link class="nav-link" :to="{ name: 'register' }" v-if="$store.state.token.length <= 0" tag="button">REGISTER</router-link></li>
-            <li class="logout" ><router-link class="nav-link" v-bind:to="{ name: 'logout' }" v-if="$store.state.token != ''" tag="button">LOGOUT</router-link></li>
+            <li class="login"><router-link class="nav-link" :to="{ name: 'LoginView' }" v-if="$store.state.token.length <= 0" tag="button">SIGN IN</router-link></li>
+            <li class="register"><router-link class="nav-link" :to="{ name: 'RegisterView' }" v-if="$store.state.token.length <= 0" tag="button">REGISTER</router-link></li>
+            <li class="logout"><router-link class="nav-link" v-bind:to="{ name: 'LogoutView' }" v-if="$store.state.token != ''" tag="button">LOGOUT</router-link></li>
           </ul>
         </div>
       </div>
