@@ -83,7 +83,7 @@ public class JdbcStatsDao implements StatsDao{
         String sql = "select count(comic_data.comic_id) as num_comics_siteWide, count(DISTINCT collection.collection_id) as num_collections_siteWide\n" +
                 "from comic_data\n" +
                 "join comic_collection ON comic_collection.comic_id = comic_data.comic_id\n" +
-                "join collection ON collection.collection_id = comic_collection.collection_id";
+                "full join collection ON collection.collection_id = comic_collection.collection_id";
 
         SqlRowSet results = jdbcTemplate.queryForRowSet(sql);
         while(results.next()){

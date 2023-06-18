@@ -9,7 +9,7 @@
       </div>
       <h2>Statistics</h2>
       <stats-collection-table id="stats" />
-      <delete-collection v-if="this.$route.name === 'collection'" />
+      <delete-collection v-if="this.$route.name === 'CollectionView'" />
     </div>
   </section>
 </template>

@@ -17,7 +17,7 @@
             <li id="browse" class="nav-link"><router-link :to="{ name: 'BrowseView' }">Browse</router-link></li>
             <li id="new-comics" class="nav-link"><router-link :to="{ name: 'new-comics' }">New Comics</router-link></li>
             <li id="collections" class="nav-link"><router-link :to="{ name: 'CollectionsView' }">My Collections</router-link></li>
-            <li id="home" class="nav-link"><router-link :to="{ name: 'home' }">Public Collections</router-link></li>
+            <li id="home" class="nav-link"><router-link :to="{ name: 'HomeView' }">Public Collections</router-link></li>
           </ul>
           <ul id="login-register">
             <li id="login" class="nav-link" v-if="signedIn"><router-link :to="{ name: 'LoginView' }" tag="button">SIGN IN</router-link></li>

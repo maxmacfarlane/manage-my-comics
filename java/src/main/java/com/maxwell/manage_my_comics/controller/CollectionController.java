@@ -26,7 +26,7 @@ public class CollectionController {
     public List<ComicCollection> getPublicCollections(){
         List<ComicCollection> collection = collectionDao.listAllCollections();
         if(collection == null || collection.size() == 0){
-            throw new ResponseStatusException(HttpStatus.NO_CONTENT, "No public collections available");
+            throw new ResponseStatusException(HttpStatus.NO_CONTENT, "No public collections found.");
         } else return collection;
     }
 
@@ -35,7 +35,7 @@ public class CollectionController {
     public List<ComicCollection> getCollectionsByUserId(@PathVariable int userId){
         List<ComicCollection> collection = collectionDao.listCollectionsByUser(userId);
         if (collection == null || collection.size() == 0) {
-            throw new ResponseStatusException(HttpStatus.NO_CONTENT, "Collection not found");
+            throw new ResponseStatusException (HttpStatus.NO_CONTENT, "No personal collections found.");
         } else return collection;
     }
 
@@ -70,7 +70,7 @@ public class CollectionController {
     public List<ComicCollection> getCollectionsByUserIdWithoutComicId(@PathVariable int userId, @PathVariable String comicId){
         List<ComicCollection> collection = collectionDao.listCollectionsByUserWithoutSpecifiedComic(userId, comicId);
         if(collection == null || collection.size() == 0){
-            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "Collection not found");
+            throw new ResponseStatusException(HttpStatus.NO_CONTENT, "Collection not found.");
         } else return collection;
     }
 

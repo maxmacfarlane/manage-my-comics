@@ -17,7 +17,6 @@ public class JdbcCharacterDao implements CharacterDao {
         this.jdbcTemplate = jdbcTemplate;
     }
 
-    //todo: get all characters by collection/comic/user?
     @Override
     public ComicCharacter getCharacterById(int characterId) {
         ComicCharacter character = null;
@@ -32,21 +31,6 @@ public class JdbcCharacterDao implements CharacterDao {
 
         return character;
     }
-
-//    @Override
-//    public List<ComicCharacter> getCharacterByAlias(String characterName) {
-//        List<ComicCharacter> characters = new ArrayList<>();
-//        String sql = "SELECT * FROM character_data WHERE alias ILIKE ?";
-//        SqlRowSet results = jdbcTemplate.queryForRowSet(sql, "%" + characterName + "%");
-//        while (results.next()) {
-//            characters.add(mapRowToCharacter(results));
-//        }
-//        if (characters.size() == 0) {
-//            return null;
-//        }
-//
-//        return characters;
-//    }
 
     @Override
     public List<ComicCharacter> getCharacterByRealName(String characterName) {
@@ -71,7 +55,6 @@ public class JdbcCharacterDao implements CharacterDao {
         while (results.next()) {
             characters.add(mapRowToCharacter(results));
         }
-
         return characters;
     }
 
@@ -91,7 +74,6 @@ public class JdbcCharacterDao implements CharacterDao {
         if (characters.size() == 0) {
             return null;
         }
-
         return characters;
     }
 

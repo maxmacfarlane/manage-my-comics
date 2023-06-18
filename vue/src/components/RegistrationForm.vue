@@ -25,7 +25,7 @@
     </div>
     <div class="existing-user">
       <p id="have-an-account">Have an account?</p>
-      <router-link :to="{ name: 'login' }" tag="button" class="register">SIGN IN</router-link>
+      <router-link :to="{ name: 'LoginView' }" tag="button" class="register">SIGN IN</router-link>
     </div>
   </div>
 </template>

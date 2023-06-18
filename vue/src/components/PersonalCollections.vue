@@ -4,7 +4,7 @@
     <add-collection />
     <div class="collection-list">
       <router-link class="collection-box"
-        :to="{ name: 'collection', params: { id: collection.collectionId } }"
+        :to="{ name: 'CollectionView', params: { id: collection.collectionId } }"
         v-for="collection in myCollections"
         :key="collection.collectionId">
       <div class="collection-card">

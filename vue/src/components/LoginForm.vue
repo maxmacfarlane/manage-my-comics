@@ -17,7 +17,7 @@
     </div>
     <div class="new-user">
       <p id="not-a-member">Not a Member?</p>
-      <router-link :to="{ name: 'register' }" tag="button" class="register">SIGN UP</router-link>
+      <router-link :to="{ name: 'RegisterView' }" tag="button" class="register">SIGN UP</router-link>
     </div>
   </div>
 </template>

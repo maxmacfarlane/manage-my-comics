@@ -15,7 +15,6 @@ const http = axios.create({
 
 export default {
 
-  // COMIC REQUESTS
   searchComicByUpc (upc) {
     return http.get(`upc/${upc}`)
   },
@@ -27,10 +26,5 @@ export default {
   getLatestReleases () {
     return http.get('latest/')
   }
-
-  // serachComicByDateRange(date1, date2){
-  //     //dates should be YYYY-MM-DD
-  //     return http.get(`comics/dateRange?date1=${date1}&date2=${date2}`)
-  // }
 
 }
